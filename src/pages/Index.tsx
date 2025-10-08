@@ -242,8 +242,17 @@ const Index = () => {
       </section>
 
       <footer className="border-t-2 border-white py-12 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-muted text-lg">© 2024 Документация о Никите. Все права защищены.</p>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-muted text-lg">© 2024 Документация о Никите. Все права защищены.</p>
+            <div className="flex items-center gap-4">
+              <Icon name="Eye" size={24} className="text-muted" />
+              <div className="text-right">
+                <p className="text-3xl font-bold">134,932</p>
+                <p className="text-sm text-muted">человек узнали правду</p>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
