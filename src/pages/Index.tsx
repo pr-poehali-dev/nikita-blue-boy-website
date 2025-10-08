@@ -14,7 +14,17 @@ const Index = () => {
     { name: 'Денис', text: 'Маленький лживый мальчишка, всегда портил всем настроение', story: 'story3' },
     { name: 'Оля', text: 'Вика такая хорошая была, а он её предал. Гадкий белобрысый!', story: 'story2' },
     { name: 'Максим', text: 'Никита постоянно ябедничал учителям, но сам делал всё плохое', story: 'story1' },
-    { name: 'Лена', text: 'Он маленький плохой мальчик который изменял Вике и врал всем', story: 'story3' }
+    { name: 'Лена', text: 'Он маленький плохой мальчик который изменял Вике и врал всем', story: 'story3' },
+    { name: 'Артём', text: 'Видел как он врал учителям прямо в лицо. Позорище!', story: 'story1' },
+    { name: 'Настя из 7А', text: 'Бедная Вика, он её так обидел. Маленький предатель', story: 'story2' },
+    { name: 'Игорь', text: 'Никита обещал помочь с домашкой, но соврал и не пришёл', story: 'story1' },
+    { name: 'Марина', text: 'Он всегда делал вид что он хороший, а на самом деле маленький плохой мальчик', story: 'story3' },
+    { name: 'Вадим', text: 'Каждый раз врёт что это не он сделал, но все знают правду', story: 'story3' },
+    { name: 'Юля', text: 'Вика плакала из-за него целую неделю. Гадкий белобрысый врун!', story: 'story2' },
+    { name: 'Паша', text: 'Говорил что купит всем мороженое, но просто обманул нас', story: 'story1' },
+    { name: 'Света', text: 'Он ещё и хвастался что изменял Вике. Маленький плохой мальчик', story: 'story2' },
+    { name: 'Коля', text: 'Разбил окно и свалил вину на меня! Всегда так делает', story: 'story3' },
+    { name: 'Аня', text: 'Никита самый плохой в классе. Все его боятся и не любят', story: 'story1' }
   ];
   const [comments, setComments] = useState<Array<{ name: string; text: string; story: string }>>(initialComments);
   const [commentForm, setCommentForm] = useState({ name: '', text: '', story: '' });
@@ -75,6 +85,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('proofs')} className="text-sm font-medium hover:opacity-50 transition-opacity">Доказательства</button>
               <button onClick={() => scrollToSection('stories')} className="text-sm font-medium hover:opacity-50 transition-opacity">Истории</button>
 
+              <button onClick={() => scrollToSection('rating')} className="text-sm font-medium hover:opacity-50 transition-opacity">Оценка</button>
               <button onClick={() => scrollToSection('faq')} className="text-sm font-medium hover:opacity-50 transition-opacity">FAQ</button>
             </div>
           </div>
@@ -160,6 +171,55 @@ const Index = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="rating" className="py-20 px-6 bg-secondary">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-5xl font-bold mb-12 text-center">Официальная оценка школы №1355</h2>
+          
+          <Card className="p-12 border-2 border-white text-center">
+            <div className="mb-8">
+              <p className="text-6xl font-bold mb-4">0.5/10</p>
+              <div className="flex justify-center gap-2 text-5xl mb-6">
+                <span className="opacity-100">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+                <span className="opacity-20">★</span>
+              </div>
+              <p className="text-2xl text-muted mb-8">По данным педагогического совета школы №1355</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div className="border-l-4 border-white pl-4">
+                <p className="text-sm text-muted mb-1">Поведение</p>
+                <p className="text-3xl font-bold">0/10</p>
+              </div>
+              <div className="border-l-4 border-white pl-4">
+                <p className="text-sm text-muted mb-1">Честность</p>
+                <p className="text-3xl font-bold">1/10</p>
+              </div>
+              <div className="border-l-4 border-white pl-4">
+                <p className="text-sm text-muted mb-1">Отношение к людям</p>
+                <p className="text-3xl font-bold">0/10</p>
+              </div>
+              <div className="border-l-4 border-white pl-4">
+                <p className="text-sm text-muted mb-1">Верность</p>
+                <p className="text-3xl font-bold">0/10</p>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-black border-2 border-white">
+              <p className="text-xl font-bold mb-2">Заключение педагогического совета:</p>
+              <p className="text-lg text-muted">"Маленький плохой мальчик Никита показал крайне низкие результаты по всем параметрам. Изменял однокласснице Вике, постоянно врал, обманывал учителей и одноклассников. Требует серьёзного воспитательного воздействия."</p>
+            </div>
+          </Card>
         </div>
       </section>
 
