@@ -1,0 +1,29 @@
+{
+  "tests": [
+    {
+      "name": "Create new comment",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "story_id": "story1",
+        "author_name": "Test User",
+        "comment_text": "Test comment"
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "comment": {
+          "story_id": "string",
+          "author_name": "string",
+          "comment_text": "string"
+        }
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get comments by story_id",
+      "method": "GET",
+      "path": "/?story_id=story1",
+      "expectedStatus": 200
+    }
+  ]
+}
