@@ -83,14 +83,24 @@ const Index = () => {
 
       <section id="main" className="pt-32 pb-20 px-6 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="max-w-3xl animate-fade-in">
-            <h2 className="text-7xl font-bold mb-6 leading-tight">Почему Никита белобрысый плохой мальчик</h2>
-            <p className="text-2xl text-muted mb-8 leading-relaxed">
-              Документальное исследование о маленьком плохом мальчике Никите, который изменял Вике и обманывал всех вокруг
-            </p>
-            <Button onClick={() => scrollToSection('proofs')} size="lg" className="h-12 px-8 text-base">
-              Смотреть доказательства
-            </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <h2 className="text-7xl font-bold mb-6 leading-tight">Почему Никита белобрысый плохой мальчик</h2>
+              <p className="text-2xl text-muted mb-8 leading-relaxed">
+                Документальное исследование о маленьком плохом мальчике Никите, который изменял Вике и обманывал всех вокруг
+              </p>
+              <Button onClick={() => scrollToSection('proofs')} size="lg" className="h-12 px-8 text-base">
+                Смотреть доказательства
+              </Button>
+            </div>
+            <div className="animate-fade-in">
+              <img 
+                src="https://cdn.poehali.dev/files/6c9bd200-325a-4c5e-8900-ec902ffbd325.png" 
+                alt="Никита белобрысый" 
+                className="w-full rounded-lg border-4 border-white shadow-2xl"
+              />
+              <p className="text-center text-muted mt-4 text-lg">Маленький плохой мальчик Никита</p>
+            </div>
           </div>
         </div>
       </section>
